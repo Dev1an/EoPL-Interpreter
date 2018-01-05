@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		742357B320001BCD00AC8D77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742357B220001BCD00AC8D77 /* AppDelegate.swift */; };
+		742357B520001BCD00AC8D77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742357B420001BCD00AC8D77 /* ViewController.swift */; };
+		742357B720001BCD00AC8D77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742357B620001BCD00AC8D77 /* Assets.xcassets */; };
+		742357BA20001BCD00AC8D77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 742357B820001BCD00AC8D77 /* Main.storyboard */; };
+		742357C620001BCD00AC8D77 /* EoPL_InterpreterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742357C520001BCD00AC8D77 /* EoPL_InterpreterTests.swift */; };
+		742357D120001BCD00AC8D77 /* EoPL_InterpreterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742357D020001BCD00AC8D77 /* EoPL_InterpreterUITests.swift */; };
+		742357E020001C0900AC8D77 /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742357DE20001C0900AC8D77 /* DataTypes.swift */; };
+		742357E120001C0900AC8D77 /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742357DF20001C0900AC8D77 /* Interpreter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		742357C220001BCD00AC8D77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 742357A720001BCC00AC8D77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 742357AE20001BCD00AC8D77;
+			remoteInfo = "EoPL Interpreter";
+		};
+		742357CD20001BCD00AC8D77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 742357A720001BCC00AC8D77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 742357AE20001BCD00AC8D77;
+			remoteInfo = "EoPL Interpreter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		742357AF20001BCD00AC8D77 /* EoPL Interpreter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EoPL Interpreter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		742357B220001BCD00AC8D77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		742357B420001BCD00AC8D77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		742357B620001BCD00AC8D77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		742357B920001BCD00AC8D77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		742357BB20001BCD00AC8D77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		742357BC20001BCD00AC8D77 /* EoPL_Interpreter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EoPL_Interpreter.entitlements; sourceTree = "<group>"; };
+		742357C120001BCD00AC8D77 /* EoPL InterpreterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EoPL InterpreterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		742357C520001BCD00AC8D77 /* EoPL_InterpreterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EoPL_InterpreterTests.swift; sourceTree = "<group>"; };
+		742357C720001BCD00AC8D77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		742357CC20001BCD00AC8D77 /* EoPL InterpreterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EoPL InterpreterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		742357D020001BCD00AC8D77 /* EoPL_InterpreterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EoPL_InterpreterUITests.swift; sourceTree = "<group>"; };
+		742357D220001BCD00AC8D77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		742357DE20001C0900AC8D77 /* DataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
+		742357DF20001C0900AC8D77 /* Interpreter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpreter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		742357AC20001BCD00AC8D77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742357BE20001BCD00AC8D77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742357C920001BCD00AC8D77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		742357A620001BCC00AC8D77 = {
+			isa = PBXGroup;
+			children = (
+				742357E220001F5A00AC8D77 /* Core */,
+				742357B120001BCD00AC8D77 /* EoPL Interpreter */,
+				742357C420001BCD00AC8D77 /* EoPL InterpreterTests */,
+				742357CF20001BCD00AC8D77 /* EoPL InterpreterUITests */,
+				742357B020001BCD00AC8D77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		742357B020001BCD00AC8D77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				742357AF20001BCD00AC8D77 /* EoPL Interpreter.app */,
+				742357C120001BCD00AC8D77 /* EoPL InterpreterTests.xctest */,
+				742357CC20001BCD00AC8D77 /* EoPL InterpreterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		742357B120001BCD00AC8D77 /* EoPL Interpreter */ = {
+			isa = PBXGroup;
+			children = (
+				742357B220001BCD00AC8D77 /* AppDelegate.swift */,
+				742357B420001BCD00AC8D77 /* ViewController.swift */,
+				742357B620001BCD00AC8D77 /* Assets.xcassets */,
+				742357B820001BCD00AC8D77 /* Main.storyboard */,
+				742357BB20001BCD00AC8D77 /* Info.plist */,
+				742357BC20001BCD00AC8D77 /* EoPL_Interpreter.entitlements */,
+			);
+			path = "EoPL Interpreter";
+			sourceTree = "<group>";
+		};
+		742357C420001BCD00AC8D77 /* EoPL InterpreterTests */ = {
+			isa = PBXGroup;
+			children = (
+				742357C520001BCD00AC8D77 /* EoPL_InterpreterTests.swift */,
+				742357C720001BCD00AC8D77 /* Info.plist */,
+			);
+			path = "EoPL InterpreterTests";
+			sourceTree = "<group>";
+		};
+		742357CF20001BCD00AC8D77 /* EoPL InterpreterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				742357D020001BCD00AC8D77 /* EoPL_InterpreterUITests.swift */,
+				742357D220001BCD00AC8D77 /* Info.plist */,
+			);
+			path = "EoPL InterpreterUITests";
+			sourceTree = "<group>";
+		};
+		742357E220001F5A00AC8D77 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				742357DE20001C0900AC8D77 /* DataTypes.swift */,
+				742357DF20001C0900AC8D77 /* Interpreter.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		742357AE20001BCD00AC8D77 /* EoPL Interpreter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 742357D520001BCD00AC8D77 /* Build configuration list for PBXNativeTarget "EoPL Interpreter" */;
+			buildPhases = (
+				742357AB20001BCD00AC8D77 /* Sources */,
+				742357AC20001BCD00AC8D77 /* Frameworks */,
+				742357AD20001BCD00AC8D77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EoPL Interpreter";
+			productName = "EoPL Interpreter";
+			productReference = 742357AF20001BCD00AC8D77 /* EoPL Interpreter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		742357C020001BCD00AC8D77 /* EoPL InterpreterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 742357D820001BCD00AC8D77 /* Build configuration list for PBXNativeTarget "EoPL InterpreterTests" */;
+			buildPhases = (
+				742357BD20001BCD00AC8D77 /* Sources */,
+				742357BE20001BCD00AC8D77 /* Frameworks */,
+				742357BF20001BCD00AC8D77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				742357C320001BCD00AC8D77 /* PBXTargetDependency */,
+			);
+			name = "EoPL InterpreterTests";
+			productName = "EoPL InterpreterTests";
+			productReference = 742357C120001BCD00AC8D77 /* EoPL InterpreterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		742357CB20001BCD00AC8D77 /* EoPL InterpreterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 742357DB20001BCD00AC8D77 /* Build configuration list for PBXNativeTarget "EoPL InterpreterUITests" */;
+			buildPhases = (
+				742357C820001BCD00AC8D77 /* Sources */,
+				742357C920001BCD00AC8D77 /* Frameworks */,
+				742357CA20001BCD00AC8D77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				742357CE20001BCD00AC8D77 /* PBXTargetDependency */,
+			);
+			name = "EoPL InterpreterUITests";
+			productName = "EoPL InterpreterUITests";
+			productReference = 742357CC20001BCD00AC8D77 /* EoPL InterpreterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		742357A720001BCC00AC8D77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Devian;
+				TargetAttributes = {
+					742357AE20001BCD00AC8D77 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					742357C020001BCD00AC8D77 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 742357AE20001BCD00AC8D77;
+					};
+					742357CB20001BCD00AC8D77 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 742357AE20001BCD00AC8D77;
+					};
+				};
+			};
+			buildConfigurationList = 742357AA20001BCC00AC8D77 /* Build configuration list for PBXProject "EoPL Interpreter" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 742357A620001BCC00AC8D77;
+			productRefGroup = 742357B020001BCD00AC8D77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				742357AE20001BCD00AC8D77 /* EoPL Interpreter */,
+				742357C020001BCD00AC8D77 /* EoPL InterpreterTests */,
+				742357CB20001BCD00AC8D77 /* EoPL InterpreterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		742357AD20001BCD00AC8D77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742357B720001BCD00AC8D77 /* Assets.xcassets in Resources */,
+				742357BA20001BCD00AC8D77 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742357BF20001BCD00AC8D77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742357CA20001BCD00AC8D77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		742357AB20001BCD00AC8D77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742357E120001C0900AC8D77 /* Interpreter.swift in Sources */,
+				742357E020001C0900AC8D77 /* DataTypes.swift in Sources */,
+				742357B520001BCD00AC8D77 /* ViewController.swift in Sources */,
+				742357B320001BCD00AC8D77 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742357BD20001BCD00AC8D77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742357C620001BCD00AC8D77 /* EoPL_InterpreterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742357C820001BCD00AC8D77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				742357D120001BCD00AC8D77 /* EoPL_InterpreterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		742357C320001BCD00AC8D77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 742357AE20001BCD00AC8D77 /* EoPL Interpreter */;
+			targetProxy = 742357C220001BCD00AC8D77 /* PBXContainerItemProxy */;
+		};
+		742357CE20001BCD00AC8D77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 742357AE20001BCD00AC8D77 /* EoPL Interpreter */;
+			targetProxy = 742357CD20001BCD00AC8D77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		742357B820001BCD00AC8D77 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				742357B920001BCD00AC8D77 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		742357D320001BCD00AC8D77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		742357D420001BCD00AC8D77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		742357D620001BCD00AC8D77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "EoPL Interpreter/EoPL_Interpreter.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7TD9A665TC;
+				INFOPLIST_FILE = "EoPL Interpreter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devian.EoPL-Interpreter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		742357D720001BCD00AC8D77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "EoPL Interpreter/EoPL_Interpreter.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7TD9A665TC;
+				INFOPLIST_FILE = "EoPL Interpreter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devian.EoPL-Interpreter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		742357D920001BCD00AC8D77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7TD9A665TC;
+				INFOPLIST_FILE = "EoPL InterpreterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devian.EoPL-InterpreterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EoPL Interpreter.app/Contents/MacOS/EoPL Interpreter";
+			};
+			name = Debug;
+		};
+		742357DA20001BCD00AC8D77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7TD9A665TC;
+				INFOPLIST_FILE = "EoPL InterpreterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devian.EoPL-InterpreterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EoPL Interpreter.app/Contents/MacOS/EoPL Interpreter";
+			};
+			name = Release;
+		};
+		742357DC20001BCD00AC8D77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7TD9A665TC;
+				INFOPLIST_FILE = "EoPL InterpreterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devian.EoPL-InterpreterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "EoPL Interpreter";
+			};
+			name = Debug;
+		};
+		742357DD20001BCD00AC8D77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7TD9A665TC;
+				INFOPLIST_FILE = "EoPL InterpreterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devian.EoPL-InterpreterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "EoPL Interpreter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		742357AA20001BCC00AC8D77 /* Build configuration list for PBXProject "EoPL Interpreter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				742357D320001BCD00AC8D77 /* Debug */,
+				742357D420001BCD00AC8D77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		742357D520001BCD00AC8D77 /* Build configuration list for PBXNativeTarget "EoPL Interpreter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				742357D620001BCD00AC8D77 /* Debug */,
+				742357D720001BCD00AC8D77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		742357D820001BCD00AC8D77 /* Build configuration list for PBXNativeTarget "EoPL InterpreterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				742357D920001BCD00AC8D77 /* Debug */,
+				742357DA20001BCD00AC8D77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		742357DB20001BCD00AC8D77 /* Build configuration list for PBXNativeTarget "EoPL InterpreterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				742357DC20001BCD00AC8D77 /* Debug */,
+				742357DD20001BCD00AC8D77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 742357A720001BCC00AC8D77 /* Project object */;
+}
