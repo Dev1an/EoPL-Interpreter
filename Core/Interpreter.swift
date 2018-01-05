@@ -27,6 +27,20 @@ extension Expression {
 				identifier, expression.value(in: environment),
 				environment)
 			)
+		case let .proc(variable, body):
+			return .procedure(variable: variable, body: body, environment)
+		case let .call(procedure, argument):
+			guard case let .procedure(variable, body, capturedEnvironment) = try procedure.value(in: environment)
+				else {
+					fatalError("call to non procedure expression")
+			}
+			return try body.value(in:
+				.extend(
+					variable,
+					argument.value(in: environment),
+					capturedEnvironment
+				)
+			)
 		case .constant(let value):
 			return .number(value)
 		case .variable(let identifier):
