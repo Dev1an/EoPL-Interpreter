@@ -32,10 +32,49 @@ class EoPL_InterpreterTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    func testZero() {
+		XCTAssertEqual(
+			valueOf(program:
+				.isZero(.constant(9))
+			),
+			.boolean(false)
+		)
+		XCTAssertEqual(
+			valueOf(program:
+				.isZero(
+					.difference( .constant(9), .constant(9) )
+				)
+			),
+			.boolean(true)
+		)
+	}
+	
+	func testIfExpression() {
+		XCTAssertEqual(
+			valueOf(program:
+				.if(condition: .isZero(.variable("x")), positive: .constant(55), negative: .constant(99))
+			),
+			.number(99)
+		)
+		XCTAssertEqual(
+			valueOf(program:
+				.if(condition: .isZero(.constant(0)), positive: .constant(55), negative: .constant(99))
+			),
+			.number(55)
+		)
+	}
+	
+	func testLet() {
+		XCTAssertEqual(
+			valueOf(program:
+				.let(
+					"cijfer", .difference(.variable("x"), .constant(1)),
+					body: .variable("cijfer")
+				)
+			),
+			.number(9)
+		)
+	}
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
@@ -43,5 +82,14 @@ class EoPL_InterpreterTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
+}
+
+extension ExpressedValue: Equatable {
+	public static func ==(lhs: ExpressedValue, rhs: ExpressedValue) -> Bool {
+		switch (lhs, rhs) {
+		case (.boolean(let left), .boolean(let right)): return left == right
+		case ( .number(let left),  .number(let right)): return left == right
+		default: return false
+		}
+	}
 }
