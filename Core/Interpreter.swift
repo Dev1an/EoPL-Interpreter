@@ -27,6 +27,8 @@ extension Expression {
 				identifier, expression.value(in: environment),
 				environment)
 			)
+		case let .letrec(identifier, argument, expression, body):
+			return try body.value(in: .recursiveExtend(identifier, argument, expression, environment))
 		case let .proc(variable, body):
 			return .procedure(variable: variable, body: body, environment)
 		case let .call(procedure, argument):
@@ -54,6 +56,12 @@ extension Environment {
 		switch self {
 		case let .extend(identifier, value, rest):
 			return identifier == query ? value : try rest.find(query)
+		case let .recursiveExtend(identifier, argument, expression, rest):
+			if query == identifier {
+				return .procedure(variable: argument, body: expression, self)
+			} else {
+				return try rest.find(query)
+			}
 		case .end: throw Error.identifierNotFound(query)
 		}
 	}

@@ -16,6 +16,7 @@
 		742357E020001C0900AC8D77 /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742357DE20001C0900AC8D77 /* DataTypes.swift */; };
 		742357E120001C0900AC8D77 /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742357DF20001C0900AC8D77 /* Interpreter.swift */; };
 		7492ACB82000E065006754FB /* ProcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492ACB72000E065006754FB /* ProcTests.swift */; };
+		7492ACBC20010D69006754FB /* LetRecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492ACBB20010D69006754FB /* LetRecTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		742357DE20001C0900AC8D77 /* DataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypes.swift; sourceTree = "<group>"; };
 		742357DF20001C0900AC8D77 /* Interpreter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpreter.swift; sourceTree = "<group>"; };
 		7492ACB72000E065006754FB /* ProcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcTests.swift; sourceTree = "<group>"; };
+		7492ACBB20010D69006754FB /* LetRecTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetRecTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				742357C520001BCD00AC8D77 /* EoPL_InterpreterTests.swift */,
 				7492ACB72000E065006754FB /* ProcTests.swift */,
+				7492ACBB20010D69006754FB /* LetRecTests.swift */,
 				742357C720001BCD00AC8D77 /* Info.plist */,
 			);
 			path = "EoPL InterpreterTests";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7492ACBC20010D69006754FB /* LetRecTests.swift in Sources */,
 				742357C620001BCD00AC8D77 /* EoPL_InterpreterTests.swift in Sources */,
 				7492ACB82000E065006754FB /* ProcTests.swift in Sources */,
 			);

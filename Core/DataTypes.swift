@@ -13,6 +13,7 @@ public enum Expression {
 	indirect case isZero(Expression)
 	indirect case `if`(condition: Expression, positive: Expression, negative: Expression)
 	indirect case `let`(Identifier, Expression, body: Expression)
+	indirect case letrec(Identifier, argument: Identifier, Expression, body: Expression)
 	indirect case proc(variable: Identifier, body: Expression)
 	indirect case call(proc: Expression, argument: Expression)
 	case constant(Int)
@@ -21,6 +22,7 @@ public enum Expression {
 
 public enum Environment {
 	indirect case extend(Identifier, ExpressedValue, Environment)
+	indirect case recursiveExtend(Identifier, Identifier, Expression, Environment)
 	case end
 }
 
