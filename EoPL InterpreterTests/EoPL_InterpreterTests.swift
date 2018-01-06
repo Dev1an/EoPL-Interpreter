@@ -9,31 +9,21 @@
 import XCTest
 @testable import EoPL_Interpreter
 
+let initialEnvironment: Environment =
+	.extend("i", .number(1),
+			.extend("v", .number(5),
+					.extend("x", .number(10),
+							.extend("f", .boolean(false), .end)
+				)
+		)
+)
+
+func valueOf(program: Expression) throws -> ExpressedValue {
+	return try program.value(in: initialEnvironment)
+}
+
 class EoPL_InterpreterTests: XCTestCase {
 	
-	let initialEnvironment: Environment =
-		.extend("i", .number(1),
-				.extend("v", .number(5),
-						.extend("x", .number(10),
-								.extend("f", .boolean(false), .end)
-						)
-			)
-	)
-	
-	func valueOf(program: Expression) throws -> ExpressedValue {
-		return try program.value(in: initialEnvironment)
-	}
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testZero() {
 		XCTAssertEqual(
 			try valueOf(program:
