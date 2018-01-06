@@ -34,3 +34,34 @@ extension Expression {
 		}
 	}
 }
+
+extension Environment {
+	func find(_ query: Identifier) throws -> ExpressedValue {
+		switch self {
+		case let .extend(identifier, value, rest):
+			return identifier == query ? value : try rest.find(query)
+		case .end: throw Error.identifierNotFound(query)
+		}
+	}
+	
+	enum Error: Swift.Error {
+		case identifierNotFound(Identifier)
+	}
+}
+
+extension ExpressedValue {
+	func toInt() throws -> Int {
+		guard case .number(let number) = self else {throw Error.expectedIntButFound(self)}
+		return number
+	}
+	
+	func toBool() throws -> Bool {
+		guard case .boolean(let boolean) = self else {throw Error.expextedBoolButFound(self)}
+		return boolean
+	}
+	
+	enum Error: Swift.Error {
+		case expectedIntButFound(ExpressedValue)
+		case expextedBoolButFound(ExpressedValue)
+	}
+}
