@@ -11,7 +11,7 @@ import XCTest
 
 class ProcTests: XCTestCase {
 	
-	let difference = Expression.proc(
+	let zxDifference = Expression.proc(
 		variable: "z",
 		body: .difference(
 			.variable("z"),
@@ -25,11 +25,11 @@ class ProcTests: XCTestCase {
 				.let(
 					"x", .constant(200),
 					body: .let(
-						"f", difference,
+						"f", zxDifference,
 						body: .let(
 							"x", .constant(100),
 							body: .let(
-								"g", difference,
+								"g", zxDifference,
 								body: .difference(
 									.call(proc: .variable("f"), argument: .constant(1)),
 									.call(proc: .variable("g"), argument: .constant(1))
