@@ -10,13 +10,15 @@ import XCTest
 @testable import EoPL_Interpreter
 
 let initialEnvironment: Environment =
-	.extend("i", .number(1),
+	.extend("minusTwo", .number(-2),
+		.extend("i", .number(1),
 			.extend("v", .number(5),
-					.extend("x", .number(10),
-							.extend("f", .boolean(false), .end)
+				.extend("x", .number(10),
+					.extend("f", .boolean(false), .end)
 				)
+			)
 		)
-)
+	)
 
 func valueOf(program: Expression) throws -> ExpressedValue {
 	return try program.value(in: initialEnvironment)
@@ -94,12 +96,6 @@ class EoPL_InterpreterTests: XCTestCase {
 		}
 	}
 	
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
 }
 
 extension ExpressedValue: Equatable {
