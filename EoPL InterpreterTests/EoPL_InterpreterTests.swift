@@ -9,7 +9,7 @@
 import XCTest
 @testable import EoPL_Interpreter
 
-let initialEnvironment: Environment =
+let initialEnvironment: Expression.Environment =
 	.extend("i", .number(1),
 			.extend("v", .number(5),
 					.extend("x", .number(10),
@@ -18,7 +18,7 @@ let initialEnvironment: Environment =
 		)
 )
 
-func valueOf(program: Expression) throws -> ExpressedValue {
+func valueOf(program: Expression) throws -> Expression.Value {
 	return try program.value(in: initialEnvironment)
 }
 
@@ -70,7 +70,7 @@ class EoPL_InterpreterTests: XCTestCase {
 	
 	func testUnknownVariable() {
 		XCTAssertThrowsError(try valueOf(program: .variable("z") ), "variable z should not be in the initial environment") { error in
-			XCTAssertTrue(error is Environment.Error, "expected Environment error but found \(error)")
+			XCTAssertTrue(error is Expression.Environment.Error, "expected Environment error but found \(error)")
 		}
 	}
 	
@@ -79,7 +79,7 @@ class EoPL_InterpreterTests: XCTestCase {
 			try valueOf(program: .isZero(.variable("f")) ),
 			"executing isZero on a boolean should throw an error"
 		) { error in
-			XCTAssertTrue(error is ExpressedValue.Error, "expected Conversion error but found \(error)")
+			XCTAssertTrue(error is Expression.Value.Error, "expected Conversion error but found \(error)")
 		}
 		XCTAssertThrowsError(
 			try valueOf(program:
@@ -90,7 +90,7 @@ class EoPL_InterpreterTests: XCTestCase {
 			),
 			"passing a number as condition should throw an error"
 		) { error in
-			XCTAssertTrue(error is ExpressedValue.Error, "expected Conversion error but found \(error)")
+			XCTAssertTrue(error is Expression.Value.Error, "expected Conversion error but found \(error)")
 		}
 	}
 	
@@ -102,8 +102,8 @@ class EoPL_InterpreterTests: XCTestCase {
     }
 }
 
-extension ExpressedValue: Equatable {
-	public static func ==(lhs: ExpressedValue, rhs: ExpressedValue) -> Bool {
+extension Expression.Value: Equatable {
+	public static func ==(lhs: Expression.Value, rhs: Expression.Value) -> Bool {
 		switch (lhs, rhs) {
 		case (.boolean(let left), .boolean(let right)): return left == right
 		case ( .number(let left),  .number(let right)): return left == right

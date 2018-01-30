@@ -7,7 +7,7 @@
 //
 
 extension Expression {
-	public func value(in environment: Environment) throws -> ExpressedValue {
+	public func value(in environment: Environment) throws -> Value {
 		switch self {
 		case let .difference(left, right):
 			return try .number(
@@ -47,10 +47,11 @@ extension Expression {
 			return try environment.find(identifier)
 		}
 	}
+	
 }
 
-extension Environment {
-	func find(_ query: Identifier) throws -> ExpressedValue {
+extension Expression.Environment {
+	func find(_ query: Expression.Identifier) throws -> Expression.Value {
 		switch self {
 		case let .extend(identifier, value, rest):
 			return identifier == query ? value : try rest.find(query)
@@ -59,11 +60,11 @@ extension Environment {
 	}
 	
 	enum Error: Swift.Error {
-		case identifierNotFound(Identifier)
+		case identifierNotFound(Expression.Identifier)
 	}
 }
 
-extension ExpressedValue {
+extension Expression.Value {
 	func toInt() throws -> Int {
 		guard case .number(let number) = self else {throw Error.expectedIntButFound(self)}
 		return number
@@ -75,7 +76,7 @@ extension ExpressedValue {
 	}
 	
 	enum Error: Swift.Error {
-		case expectedIntButFound(ExpressedValue)
-		case expextedBoolButFound(ExpressedValue)
+		case expectedIntButFound(Expression.Value)
+		case expextedBoolButFound(Expression.Value)
 	}
 }
